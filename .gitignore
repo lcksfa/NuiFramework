@@ -1,0 +1,14 @@
+*
+!*/
+!*.cpp
+!*.cc
+!*.h
+!*.rc
+!*.ico
+!*.html
+!*.xml
+!*.png
+!CMakeLists.txt
+!.vscode/*
+!.gitignore
+build
