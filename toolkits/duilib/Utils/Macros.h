@@ -21,7 +21,6 @@ namespace ui
 #define     GetWindowOwner(hwnd)    GetWindow(hwnd, GW_OWNER)
 
 ///////////////////////////////////////////////////////
-// WM_TOUCH¡ä£¤?t???¡é
 #define WM_TOUCH                        0x0240
 #define WM_GESTURE                      0x0119
 #define WM_GESTURENOTIFY                0x011A

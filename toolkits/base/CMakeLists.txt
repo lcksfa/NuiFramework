@@ -12,7 +12,7 @@ FILE(GLOB SRCFILES
   hardware/*.cpp
   memory/*.cpp
   network/*.cpp
-  synchronzation/*.cpp
+  synchronization/*.cpp
   thread/*.cpp
   time/*.cpp
   util/*.cpp
