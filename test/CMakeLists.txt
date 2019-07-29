@@ -5,11 +5,11 @@ set(This unittest)
 # catch2 test head#############################
 find_path(CATCH_INCLUDE_DIR catch.hpp)
 include_directories(${CATCH_INCLUDE_DIR})
-include_directories(${PROJECT_SOURCE_DIR}/src/logic)
+include_directories(${PROJECT_SOURCE_DIR}/src/module)
 add_executable(${This}
 	test_me.cc
 )
-target_link_libraries(${This} logic)
+target_link_libraries(${This} module)
 add_test(
     NAME ${This}
     COMMAND ${This}
