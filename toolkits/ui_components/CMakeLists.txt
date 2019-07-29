@@ -1,0 +1,26 @@
+# cmake file for duilib
+#Author lcksfa(yousaid820@163.com)
+#Created: 2019/07/29
+
+set(This ui_components)
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR} Root_src)
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/menu menu_src)
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/modal_wnd modal_wnd_src)
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/msgbox msgbox_src)
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/shadow_wnd shadow_wnd_src)
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/toast toast_src)
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/windows_manager windows_manager_src)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/menu)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/modal_wnd)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/msgbox)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/shadow_wnd)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/toast)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/windows_manager)
+include_directories(../)
+set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
+add_library(${This} STATIC ${menu_src} ${modal_wnd_src} ${msgbox_src} ${shadow_wnd_src} ${toast_src} ${windows_manager_src} ${Root_src})
+add_definitions(-DUNICODE -D_UNICODE)
+target_link_libraries(${This} duilib)
+set_target_properties(${This} PROPERTIES OUTPUT_NAME "ui_components")

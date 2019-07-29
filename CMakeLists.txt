@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.0.0)
-set(This v3myboy)
+set(This myboy)
 project(${This} VERSION 0.1.0)
 
+add_subdirectory(toolkits)
 include(CTest)
 enable_testing()
 include_directories(include)

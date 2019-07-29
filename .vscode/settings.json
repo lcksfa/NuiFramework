@@ -20,4 +20,7 @@
     "explorer.confirmDragAndDrop": false,
     "files.trimTrailingWhitespace": true,
     "files.trimFinalNewlines": true,
+    "files.associations": {
+      "limits": "cpp"
+    },
 }
