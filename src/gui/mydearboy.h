@@ -2,23 +2,19 @@
 
 #include "resource.h"
 
-
 /** @class MainThread
-* @brief UI thread extends nbase::FrameworkThread
-* @copyright (c) 2015, NetEase Inc. All rights reserved
-* @author towik
-* @date 2015/1/1
-*/
-class MainThread : public nbase::FrameworkThread
-{
-public:
-	MainThread() : nbase::FrameworkThread("MainThread") {}
-	virtual ~MainThread() {}
+ * @brief UI thread extends nbase::FrameworkThread
+ * @copyright (c) 2015, NetEase Inc. All rights reserved
+ * @author towik
+ * @date 2015/1/1
+ */
+class MainThread : public nbase::FrameworkThread {
+  public:
+    MainThread() : nbase::FrameworkThread("MainThread") {}
+    virtual ~MainThread() {}
 
-private:
+  private:
+    virtual void Init() override;
 
-	virtual void Init() override;
-
-	
-	virtual void Cleanup() override;
+    virtual void Cleanup() override;
 };

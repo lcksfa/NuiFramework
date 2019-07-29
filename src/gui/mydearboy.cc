@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "mydearboy.h"
 #include "MainWnd.h"
-//fixme :here should make a signton class
+// fixme :here should make a signton class
 Logme gg;
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
@@ -20,7 +20,7 @@ void MainThread::Init() {
     nbase::ThreadManager::RegisterThread(kThreadUI);
 
     std::wstring theme_dir = QPath::GetAppPath();
-    gg.get()->info(L"hello world:{},{}",theme_dir,45645);
+    gg.get()->info(L"hello world:{},{}", theme_dir, 45645);
 #ifdef _DEBUG
     // In order to facilitate in vscode find resources under the root directory of the folder
     theme_dir = L"F:\\66-projects\\v3myboy\\";

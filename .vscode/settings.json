@@ -1,35 +1,36 @@
 {
-    "C_Cpp.errorSquiggles": "Enabled",
-    "cmake.configureSettings": {
-        "CMAKE_TOOLCHAIN_FILE" : "F:/05-vcpkg-install/vcpkg/scripts/buildsystems/vcpkg.cmake"
-      },
-    "editor.fontSize": 14,
-    "workbench.colorTheme": "One Dark Pro",
-    "editor.fontFamily": "Operator Mono, Menlo, 'Courier New', monospace",
-    "terminal.integrated.fontFamily": "'Operator Mono', 'Inconsolata for Powerline', monospace",
-    "editor.lineHeight": 24.65,
-    "editor.letterSpacing": 0.0,
-    "editor.fontWeight": "normal",
-    "editor.fontLigatures": true,
-    "editor.cursorWidth": 5,
-    "editor.cursorBlinking": "solid",
-    "editor.renderWhitespace": "all",
-    "editor.snippetSuggestions": "top",
-    "editor.glyphMargin": true,
-    "workbench.editor.enablePreview": false,
-    "explorer.confirmDragAndDrop": false,
-    "files.trimTrailingWhitespace": true,
-    "files.trimFinalNewlines": true,
-    "files.associations": {
-      "limits": "cpp",
-      "memory": "cpp"
-    },
-    "files.exclude": {
-      "**/.git": true,
-      "**/.svn": true,
-      "**/.hg": true,
-      "**/CVS": true,
-      "**/.DS_Store": true,
-      "build":true
-    }
+  "C_Cpp.errorSquiggles": "Enabled",
+  "cmake.configureSettings": {
+    "CMAKE_TOOLCHAIN_FILE": "F:/05-vcpkg-install/vcpkg/scripts/buildsystems/vcpkg.cmake"
+  },
+  "editor.fontSize": 14,
+  "workbench.colorTheme": "One Dark Pro",
+  "editor.fontFamily": "Operator Mono, Menlo, 'Courier New', monospace",
+  "terminal.integrated.fontFamily": "'Operator Mono', 'Inconsolata for Powerline', monospace",
+  "editor.lineHeight": 24.65,
+  "editor.letterSpacing": 0.0,
+  "editor.fontWeight": "normal",
+  "editor.fontLigatures": true,
+  "editor.cursorWidth": 5,
+  "editor.cursorBlinking": "solid",
+  "editor.renderWhitespace": "all",
+  "editor.snippetSuggestions": "top",
+  "editor.glyphMargin": true,
+  "workbench.editor.enablePreview": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "files.associations": {
+    "limits": "cpp",
+    "memory": "cpp"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "build": true
+  },
+  "editor.formatOnSave": true
 }

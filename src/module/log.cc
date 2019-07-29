@@ -1,8 +1,7 @@
 #include "log.h"
 
-Logme::Logme(/* args */)
-{
-      // Set the default logger to file logger
+Logme::Logme(/* args */) {
+    // Set the default logger to file logger
     AllocConsole();
     logger_ = spdlog::stdout_color_mt("console1");
     // console->info("Welcome to spdlog!");
@@ -30,15 +29,10 @@ Logme::Logme(/* args */)
     // spdlog::set_default_logger(file_logger);
 
     // auto console = spdlog::stdout_color_mt("console");
-    // spdlog::get("console")->info("loggers can be retrieved from a global registry using the spdlog::get(logger_name)");
-
+    // spdlog::get("console")->info("loggers can be retrieved from a global registry using the
+    // spdlog::get(logger_name)");
 }
 
-std::shared_ptr<spdlog::logger> Logme:: get(){
-    return logger_;
-}
+std::shared_ptr<spdlog::logger> Logme::get() { return logger_; }
 
-Logme::~Logme()
-{
-    spdlog::drop_all();
-}
+Logme::~Logme() { spdlog::drop_all(); }

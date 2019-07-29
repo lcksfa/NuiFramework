@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "MainWnd.h"
 
-
 const std::wstring MainWnd::kClassName = L"MyDearBoy";
 
 MainWnd::MainWnd(/* args */) {}
@@ -16,8 +15,7 @@ std::wstring MainWnd::GetWindowClassName() const { return kClassName; }
 
 void MainWnd::InitWindow() {
     SetIcon(IDI_MYDEARBOY);
-     gg.get()->info("MainWnd world!");
-    // Logme g;
+    gg.get()->info("MainWnd world!");
 }
 
 LRESULT MainWnd::OnClose(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL &bHandled) {

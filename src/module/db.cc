@@ -1,13 +1,7 @@
 #include "db.h"
 #include "sqlite3.h"
-DB::DB(/* args */)
-{
-}
+DB::DB(/* args */) {}
 
-DB::~DB()
-{
-}
+DB::~DB() {}
 
-std::string DB:: printVersion(){
-    return sqlite3_libversion();
-}
+std::string DB::printVersion() { return sqlite3_libversion(); }

@@ -1,11 +1,10 @@
 #pragma once
 #include <string>
 
-class StringFormat
-{
-private:
+class StringFormat {
+  private:
     /* data */
-public:
+  public:
     StringFormat(/* args */);
     ~StringFormat();
     std::string getTodayDate();

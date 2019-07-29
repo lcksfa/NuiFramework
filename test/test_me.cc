@@ -10,21 +10,19 @@
 // #include <stdio.h>
 #include "log.h"
 
-TEST_CASE("normal test for test"){
-    REQUIRE(1 == 1);
-}
+TEST_CASE("normal test for test") { REQUIRE(1 == 1); }
 
 TEST_CASE("testfmtlibrary", "date") {
     StringFormat f;
     REQUIRE(f.getTodayDate() == "2019-07-29");
 }
 
-TEST_CASE("testuseof_sqlite3","printVersion"){
+TEST_CASE("testuseof_sqlite3", "printVersion") {
     DB sq3;
     REQUIRE(sq3.printVersion() == "3.29.0");
 }
 
-TEST_CASE("test sqdlog library","the basic log"){
+TEST_CASE("test sqdlog library", "the basic log") {
     Logme g;
     // g.info("ceui {} {}");
 }
@@ -54,14 +52,14 @@ TEST_CASE("test sqdlog library","the basic log"){
 //     // equl to format(L"The answer is {the_answer}", arg("the_answer", 42));
 //     REQUIRE(udlstr == "The answer is 42");
 
-//     auto uslstr2 = fmt::format("My name is {my_name},i am {old} years old", "my_name"_a = "lcksfa",
+//     auto uslstr2 = fmt::format("My name is {my_name},i am {old} years old", "my_name"_a =
+//     "lcksfa",
 //                                "old"_a = 29);
 //     REQUIRE(uslstr2 =="My name is lcksfa,i am 29 years old");
 
 //     std::string message2 = "{0}{1}{0}"_format("abra", "cad");
 //     REQUIRE(message2 == "abracadabra");
 // }
-
 
 // TEST_CASE("TESTFMT4", "T_File_") {
 //     FILE *fp = nullptr;
