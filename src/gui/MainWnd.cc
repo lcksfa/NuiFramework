@@ -16,7 +16,7 @@ std::wstring MainWnd::GetWindowClassName() const { return kClassName; }
 
 void MainWnd::InitWindow() {
     SetIcon(IDI_MYDEARBOY);
-    AllocConsole();
+     gg.get()->info("MainWnd world!");
     // Logme g;
 }
 

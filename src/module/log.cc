@@ -3,6 +3,7 @@
 Logme::Logme(/* args */)
 {
       // Set the default logger to file logger
+    AllocConsole();
     logger_ = spdlog::stdout_color_mt("console1");
     // console->info("Welcome to spdlog!");
     // spdlog::info("Welcome to spdlog!");
@@ -33,9 +34,9 @@ Logme::Logme(/* args */)
 
 }
 
-// void Logme::info(const std::string& msg){
-    // logger_->info(msg);
-// }
+std::shared_ptr<spdlog::logger> Logme:: get(){
+    return logger_;
+}
 
 Logme::~Logme()
 {

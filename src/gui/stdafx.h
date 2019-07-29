@@ -27,4 +27,5 @@
 #include "duilib/UIlib.h"
 
 //log
-// #include "module/log.h"
+#include "module/log.h"
+extern   Logme gg;

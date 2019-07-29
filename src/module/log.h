@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
 #include <memory>
+#define SPDLOG_WCHAR_TO_UTF8_SUPPORT
 #include "spdlog/spdlog.h"
 // #include "spdlog/sinks/basic_file_sink.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
@@ -12,7 +13,7 @@ private:
 public:
     Logme(/* args */);
     ~Logme();
-    void info(const std::string& msg);
+    std::shared_ptr<spdlog::logger> get();
 private:
     std::shared_ptr<spdlog::logger> logger_;
 };
