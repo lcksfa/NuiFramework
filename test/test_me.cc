@@ -15,7 +15,7 @@ TEST_CASE("normal test for test"){
 
 TEST_CASE("testfmtlibrary", "date") {
     Use_fmt f;
-    REQUIRE(f.getTodayDate() == "2019-07-28");
+    REQUIRE(f.getTodayDate() == "2019-07-29");
 }
 
 TEST_CASE("testuseof_sqlite3","printVersion"){

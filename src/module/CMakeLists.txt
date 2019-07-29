@@ -7,4 +7,5 @@ add_library(${This} STATIC ${SRCFILES})
 find_package(fmt CONFIG REQUIRED)
 # add sqlite3 library
 find_package(sqlite3 CONFIG REQUIRED)
-target_link_libraries(${This} PRIVATE fmt::fmt fmt::fmt-header-only sqlite3 base shared)
+find_package(spdlog CONFIG REQUIRED)
+target_link_libraries(${This} PRIVATE fmt::fmt fmt::fmt-header-only spdlog::spdlog sqlite3 base shared)

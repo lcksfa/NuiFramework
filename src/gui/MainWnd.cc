@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "MainWnd.h"
 
-const std::wstring MainWnd::kClassName = L"MyDearBoyMainWnd";
+const std::wstring MainWnd::kClassName = L"MyDearBoy";
 
 MainWnd::MainWnd(/* args */) {}
 
