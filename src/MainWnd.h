@@ -1,5 +1,5 @@
 #pragma once
-
+#include "resource.h"
 class MainWnd : public ui::WindowImplBase {
   private:
     /* data */

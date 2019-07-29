@@ -7,11 +7,12 @@ include(CTest)
 enable_testing()
 include_directories(include)
 include_directories(toolkits)
+include_directories(src)
 add_definitions(-DUNICODE -D_UNICODE)
 # add all the cc file automate in src folder
 FILE(GLOB SRCFILES src/*.cc)
 # set(SOURCES src/*.cc  main.cc)
-add_executable(${This} ${SRCFILES})
+add_executable(${This} ${SRCFILES} src/mydearboy.rc)
 # add_library(${This} ${SRCFILES})
 
 # add fmt library

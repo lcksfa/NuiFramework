@@ -13,7 +13,9 @@ std::wstring MainWnd::GetSkinFile() { return L"basic.xml"; }
 
 std::wstring MainWnd::GetWindowClassName() const { return kClassName; }
 
-void MainWnd::InitWindow() {}
+void MainWnd::InitWindow() {
+    SetIcon(IDI_MYDEARBOY);
+}
 
 LRESULT MainWnd::OnClose(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL &bHandled) {
     PostQuitMessage(0L);
