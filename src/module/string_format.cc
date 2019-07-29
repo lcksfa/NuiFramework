@@ -1,16 +1,16 @@
-#include "use_fmt.h"
+#include "string_format.h"
 #include "fmt\time.h"
 #include <time.h>
 
-Use_fmt::Use_fmt(/* args */)
+StringFormat::StringFormat(/* args */)
 {
 }
 
-Use_fmt::~Use_fmt()
+StringFormat::~StringFormat()
 {
 }
 
- std::string Use_fmt::getTodayDate()
+ std::string StringFormat::getTodayDate()
  {
     auto t = std::time(nullptr);
     struct tm newtime;

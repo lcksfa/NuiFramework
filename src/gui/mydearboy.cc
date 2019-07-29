@@ -8,7 +8,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance
     UNREFERENCED_PARAMETER(lpCmdLine);
 
     MainThread thread;
-
+    
     thread.RunOnCurrentThreadWithLoop(nbase::MessageLoop::kUIMessageLoop);
 
     return 0;

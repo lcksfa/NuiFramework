@@ -1,11 +1,11 @@
 #pragma once
 #include <string>
-class Use_sqlite3
+class DB
 {
 private:
     /* data */
 public:
-    Use_sqlite3(/* args */);
-    ~Use_sqlite3();
+    DB(/* args */);
+    ~DB();
     std::string printVersion();
 };

@@ -1,12 +1,12 @@
 #pragma once
 #include <string>
 
-class Use_fmt
+class StringFormat
 {
 private:
     /* data */
 public:
-    Use_fmt(/* args */);
-    ~Use_fmt();
+    StringFormat(/* args */);
+    ~StringFormat();
     std::string getTodayDate();
 };

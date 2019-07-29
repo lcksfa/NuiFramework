@@ -1,26 +1,32 @@
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
-#include "use_fmt.h"
-#include "use_sqlite3.h"
+#include "string_format.h"
+#include "db.h"
 // #include "fmt\time.h"
 // #include <string>
 // #include <vector>
 // #include "fmt\printf.h"
 // #include <cstdio>
 // #include <stdio.h>
+#include "log.h"
 
 TEST_CASE("normal test for test"){
     REQUIRE(1 == 1);
 }
 
 TEST_CASE("testfmtlibrary", "date") {
-    Use_fmt f;
+    StringFormat f;
     REQUIRE(f.getTodayDate() == "2019-07-29");
 }
 
 TEST_CASE("testuseof_sqlite3","printVersion"){
-    Use_sqlite3 sq3;
+    DB sq3;
     REQUIRE(sq3.printVersion() == "3.29.0");
+}
+
+TEST_CASE("test sqdlog library","the basic log"){
+    Logme g;
+    // g.info("ceui {} {}");
 }
 // TEST_CASE("TESTFMT2", "T_Normal") {
 //     auto str = fmt::format("The is {}", 42);

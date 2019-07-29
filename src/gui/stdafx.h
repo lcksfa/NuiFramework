@@ -25,3 +25,6 @@
 
 // duilib
 #include "duilib/UIlib.h"
+
+//log
+// #include "module/log.h"
