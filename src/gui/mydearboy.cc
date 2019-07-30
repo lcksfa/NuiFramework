@@ -23,7 +23,7 @@ void MainThread::Init() {
     gg.get()->info(L"hello world:{},{}", theme_dir, 45645);
 #ifdef _DEBUG
     // In order to facilitate in vscode find resources under the root directory of the folder
-    theme_dir = L"F:\\66-projects\\v3myboy\\";
+    theme_dir = L"F:/66-projects/NuiFramework/";
 
     // Debug use local folder
     // default resources\\themes\\default
