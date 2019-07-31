@@ -1,14 +1,10 @@
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
+#include "fakeit.hpp"
 #include "string_format.h"
 #include "db.h"
-// #include "fmt\time.h"
-// #include <string>
-// #include <vector>
-// #include "fmt\printf.h"
-// #include <cstdio>
-// #include <stdio.h>
 #include "log.h"
+#include "Calculator.h"
 
 TEST_CASE("normal test for test") { REQUIRE(1 == 1); }
 
@@ -26,47 +22,22 @@ TEST_CASE("test sqdlog library", "the basic log") {
     Logme g;
     // g.info("ceui {} {}");
 }
-// TEST_CASE("TESTFMT2", "T_Normal") {
-//     auto str = fmt::format("The is {}", 42);
-//     REQUIRE(str == "The is 42");
 
-//     std::vector<wchar_t> result;
-//     fmt::format_to(back_inserter(result), L"{}", 42);
-//     std::vector<wchar_t> march = {L'4', L'2'};
-//     REQUIRE(march == result);
+using namespace fakeit;
+TEST_CASE("Calculate with two valid numbers --> server called") {
+    Mock<DataAccess> fakeDataAccess;
 
-//     // NO ALLOCATIONS
-//     fmt::basic_memory_buffer<char, 100> buffer;
-//     fmt::format_to(buffer, "{}", 52);
-//     auto result2 = fmt::to_string(buffer);
-//     REQUIRE(result2 =="52");
-// }
+    auto data = std::make_pair(1, 2);
+    When(Method(fakeDataAccess, GetData)).Return(data);
 
-// TEST_CASE("TESEFMT3", "USE_DEFINED_LITERALS") {
-//     // USER-DEFINED LITERALS
-//     using namespace fmt::literals;
-//     std::wstring message = L"The answer is {}"_format(42);
-//     REQUIRE(message ==  L"The answer is 42");
+    std::string dummy = "http://base";
+    Mock<RestApiClient> fakeClient;
 
-//     auto udlstr = fmt::format("The answer is {the_answer}", "the_answer"_a = 42);
-//     // equl to format(L"The answer is {the_answer}", arg("the_answer", 42));
-//     REQUIRE(udlstr == "The answer is 42");
+    When(Method(fakeClient, HttpGet)).Return("3");
 
-//     auto uslstr2 = fmt::format("My name is {my_name},i am {old} years old", "my_name"_a =
-//     "lcksfa",
-//                                "old"_a = 29);
-//     REQUIRE(uslstr2 =="My name is lcksfa,i am 29 years old");
+    Calculator calculator(fakeDataAccess.get(), fakeClient.get());
 
-//     std::string message2 = "{0}{1}{0}"_format("abra", "cad");
-//     REQUIRE(message2 == "abracadabra");
-// }
+    REQUIRE(calculator.CalculateNextData() == 3);
 
-// TEST_CASE("TESTFMT4", "T_File_") {
-//     FILE *fp = nullptr;
-//     fopen_s(&fp, "test.txt", "w+");
-//     if (!fp) {
-//         fmt::fprintf(stderr, "text.txt open failed!");
-//     }
-//     fmt::fprintf(fp, "Hello %s", "World.");
-
-// }
+    Verify(Method(fakeClient, HttpGet)).AtLeastOnce();
+}

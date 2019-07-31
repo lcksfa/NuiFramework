@@ -4,8 +4,8 @@
     "CMAKE_TOOLCHAIN_FILE": "F:/05-vcpkg-install/vcpkg/scripts/buildsystems/vcpkg.cmake"
   },
   "editor.fontSize": 14,
-  "workbench.colorTheme": "One Dark Pro",
-  "editor.fontFamily": "Operator Mono, Menlo, 'Courier New', monospace",
+  "workbench.colorTheme": "Monokai Light",
+  "editor.fontFamily": "Fira Code, Menlo, 'Courier New', monospace",
   "terminal.integrated.fontFamily": "'Operator Mono', 'Inconsolata for Powerline', monospace",
   "editor.lineHeight": 24.65,
   "editor.letterSpacing": 0.0,

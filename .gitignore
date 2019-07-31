@@ -1,6 +1,7 @@
 *
 !*/
 !*.cpp
+!*.hpp
 !*.cc
 !*.h
 !*.rc
@@ -8,6 +9,7 @@
 !*.html
 !*.xml
 !*.png
+!.clang-format
 !CMakeLists.txt
 !.vscode/*
 !.gitignore
