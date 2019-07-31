@@ -1131,7 +1131,9 @@ namespace fakeit {
     }
 
 }
+
 #if __has_include("catch2/catch.hpp")
+
 #   include "catch2/catch.hpp"
 #else
 #   include "catch.hpp"

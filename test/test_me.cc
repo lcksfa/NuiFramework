@@ -5,6 +5,7 @@
 #include "db.h"
 #include "log.h"
 #include "Calculator.h"
+#include "cpprest.h"
 
 TEST_CASE("normal test for test") { REQUIRE(1 == 1); }
 
@@ -41,3 +42,5 @@ TEST_CASE("Calculate with two valid numbers --> server called") {
 
     Verify(Method(fakeClient, HttpGet)).AtLeastOnce();
 }
+
+TEST_CASE("test cpprest in valid  -> demo1") { usecpptestsdk(); }
